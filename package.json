@@ -1,0 +1,36 @@
+{
+  "name": "ricardo-portfolio-api",
+  "version": "1.0.0",
+  "description": "REST API for my professional portfolio built with Node.js, Express, TypeScript and MongoDB.",
+  "main": "dist/server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "start": "node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseRicardoPE/ricardo-portfolio-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/JoseRicardoPE/ricardo-portfolio-api/issues"
+  },
+  "homepage": "https://github.com/JoseRicardoPE/ricardo-portfolio-api#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
