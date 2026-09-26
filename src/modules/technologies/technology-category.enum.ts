@@ -3,4 +3,5 @@ export enum TechnologyCategory {
     BACKEND = 'backend',
     DATABASE = 'database',
     TOOLS = 'tools',
+    LANGUAGE = 'language',
 }
