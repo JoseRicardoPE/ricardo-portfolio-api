@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose';
 import { ProjectCategory } from './project-category.enum.js';
 import type { IProject } from './project.interface.js';
+import { localizedTextSchema } from '../../shared/schemas/localized-text.schema.js';
 
 const projectSchema = new Schema<IProject>(
     {
@@ -18,10 +19,8 @@ const projectSchema = new Schema<IProject>(
             lowercase: true,
         },
         shortDescription: {
-            type: String,
+            type: localizedTextSchema,
             required: true,
-            trim: true,
-            maxLength: 300,
         },
         category: {
             type: String,

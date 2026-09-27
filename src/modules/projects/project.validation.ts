@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { ProjectCategory } from './project-category.enum.js';
+import { localizedTextValidationSchema } from '../../shared/validations/localized-text.validation.js';
 
 export const projectSchema = z.object({
     title: z.string().trim().min(1).max(100),
@@ -9,7 +10,7 @@ export const projectSchema = z.object({
         .min(1)
         .max(100)
         .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
-    shortDescription: z.string().trim().min(1).max(300),
+    shortDescription: localizedTextValidationSchema,
     category: z.enum(ProjectCategory),
     technologies: z.array(z.string().regex(/^[a-f\d]{24}$/i, 'Invalid technology ID')).default([]),
     thumbnail: z.url().optional(),
