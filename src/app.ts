@@ -5,6 +5,7 @@ import { notFoundHandler } from './middlewares/not-found.middleware.js';
 import { technologyRouter } from './modules/technologies/technology.routes.js';
 import { projectRouter } from './modules/projects/project.routes.js';
 import { caseStudyRouter } from './modules/case-studies/case-study.routes.js';
+import { contactRouter } from './modules/contact/contact.routes.js';
 
 export const app = Express();
 
@@ -20,6 +21,7 @@ app.get('/health', (req, res) => {
 app.use('/api/technologies', technologyRouter);
 app.use('/api/projects', projectRouter);
 app.use('/api/case-studies', caseStudyRouter);
+app.use('/api/contact', contactRouter);
 
 app.use(notFoundHandler);
 app.use(errorHandler);
