@@ -36,6 +36,11 @@ const technologySchema = new Schema<Technology>(
             required: true,
             default: true,
         },
+        featured: {
+            type: Boolean,
+            required: true,
+            default: false,
+        },
     },
     {
         timestamps: true,

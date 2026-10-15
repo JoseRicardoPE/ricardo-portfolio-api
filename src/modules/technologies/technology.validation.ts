@@ -14,6 +14,7 @@ export const technologySchema = z.object({
     icon: z.string().trim().max(255).optional(),
     order: z.number().int().min(0),
     isActive: z.boolean(),
+    featured: z.boolean().default(false),
 });
 
 export const technologyQuerySchema = z.object({
