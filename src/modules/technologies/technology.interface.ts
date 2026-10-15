@@ -7,4 +7,5 @@ export interface Technology {
     icon?: string;
     order: number;
     isActive: boolean;
+    featured: boolean;
 }
